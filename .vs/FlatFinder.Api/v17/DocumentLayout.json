@@ -1,0 +1,155 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\projects\\FlatFinder\\backend\\FlatFinder.Api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{36C1C1E8-EA82-40B9-B48B-8B6176343A5F}|FlatFinder.Api\\FlatFinder.Api.csproj|c:\\projects\\flatfinder\\backend\\flatfinder.api\\flatfinder.api\\services\\searchlinkbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36C1C1E8-EA82-40B9-B48B-8B6176343A5F}|FlatFinder.Api\\FlatFinder.Api.csproj|solutionrelative:flatfinder.api\\services\\searchlinkbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36C1C1E8-EA82-40B9-B48B-8B6176343A5F}|FlatFinder.Api\\FlatFinder.Api.csproj|c:\\projects\\flatfinder\\backend\\flatfinder.api\\flatfinder.api\\models\\citymap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36C1C1E8-EA82-40B9-B48B-8B6176343A5F}|FlatFinder.Api\\FlatFinder.Api.csproj|solutionrelative:flatfinder.api\\models\\citymap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36C1C1E8-EA82-40B9-B48B-8B6176343A5F}|FlatFinder.Api\\FlatFinder.Api.csproj|c:\\projects\\flatfinder\\backend\\flatfinder.api\\flatfinder.api\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36C1C1E8-EA82-40B9-B48B-8B6176343A5F}|FlatFinder.Api\\FlatFinder.Api.csproj|solutionrelative:flatfinder.api\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36C1C1E8-EA82-40B9-B48B-8B6176343A5F}|FlatFinder.Api\\FlatFinder.Api.csproj|c:\\projects\\flatfinder\\backend\\flatfinder.api\\flatfinder.api\\services\\searchparserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36C1C1E8-EA82-40B9-B48B-8B6176343A5F}|FlatFinder.Api\\FlatFinder.Api.csproj|solutionrelative:flatfinder.api\\services\\searchparserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36C1C1E8-EA82-40B9-B48B-8B6176343A5F}|FlatFinder.Api\\FlatFinder.Api.csproj|c:\\projects\\flatfinder\\backend\\flatfinder.api\\flatfinder.api\\models\\searchresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36C1C1E8-EA82-40B9-B48B-8B6176343A5F}|FlatFinder.Api\\FlatFinder.Api.csproj|solutionrelative:flatfinder.api\\models\\searchresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36C1C1E8-EA82-40B9-B48B-8B6176343A5F}|FlatFinder.Api\\FlatFinder.Api.csproj|c:\\projects\\flatfinder\\backend\\flatfinder.api\\flatfinder.api\\models\\searchrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36C1C1E8-EA82-40B9-B48B-8B6176343A5F}|FlatFinder.Api\\FlatFinder.Api.csproj|solutionrelative:flatfinder.api\\models\\searchrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36C1C1E8-EA82-40B9-B48B-8B6176343A5F}|FlatFinder.Api\\FlatFinder.Api.csproj|c:\\projects\\flatfinder\\backend\\flatfinder.api\\flatfinder.api\\models\\searchlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36C1C1E8-EA82-40B9-B48B-8B6176343A5F}|FlatFinder.Api\\FlatFinder.Api.csproj|solutionrelative:flatfinder.api\\models\\searchlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36C1C1E8-EA82-40B9-B48B-8B6176343A5F}|FlatFinder.Api\\FlatFinder.Api.csproj|c:\\projects\\flatfinder\\backend\\flatfinder.api\\flatfinder.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36C1C1E8-EA82-40B9-B48B-8B6176343A5F}|FlatFinder.Api\\FlatFinder.Api.csproj|solutionrelative:flatfinder.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CityMap.cs",
+              "DocumentMoniker": "C:\\projects\\FlatFinder\\backend\\FlatFinder.Api\\FlatFinder.Api\\Models\\CityMap.cs",
+              "RelativeDocumentMoniker": "FlatFinder.Api\\Models\\CityMap.cs",
+              "ToolTip": "C:\\projects\\FlatFinder\\backend\\FlatFinder.Api\\FlatFinder.Api\\Models\\CityMap.cs",
+              "RelativeToolTip": "FlatFinder.Api\\Models\\CityMap.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAswEUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-01T04:55:27.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\projects\\FlatFinder\\backend\\FlatFinder.Api\\FlatFinder.Api\\Program.cs",
+              "RelativeDocumentMoniker": "FlatFinder.Api\\Program.cs",
+              "ToolTip": "C:\\projects\\FlatFinder\\backend\\FlatFinder.Api\\FlatFinder.Api\\Program.cs",
+              "RelativeToolTip": "FlatFinder.Api\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T18:22:10.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SearchController.cs",
+              "DocumentMoniker": "C:\\projects\\FlatFinder\\backend\\FlatFinder.Api\\FlatFinder.Api\\Controllers\\SearchController.cs",
+              "RelativeDocumentMoniker": "FlatFinder.Api\\Controllers\\SearchController.cs",
+              "ToolTip": "C:\\projects\\FlatFinder\\backend\\FlatFinder.Api\\FlatFinder.Api\\Controllers\\SearchController.cs",
+              "RelativeToolTip": "FlatFinder.Api\\Controllers\\SearchController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAIwBUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T18:14:48.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SearchLinkBuilder.cs",
+              "DocumentMoniker": "C:\\projects\\FlatFinder\\backend\\FlatFinder.Api\\FlatFinder.Api\\Services\\SearchLinkBuilder.cs",
+              "RelativeDocumentMoniker": "FlatFinder.Api\\Services\\SearchLinkBuilder.cs",
+              "ToolTip": "C:\\projects\\FlatFinder\\backend\\FlatFinder.Api\\FlatFinder.Api\\Services\\SearchLinkBuilder.cs",
+              "RelativeToolTip": "FlatFinder.Api\\Services\\SearchLinkBuilder.cs",
+              "ViewState": "AgIAAMYAAAAAAAAAAAAswM4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T18:14:08.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SearchParserService.cs",
+              "DocumentMoniker": "C:\\projects\\FlatFinder\\backend\\FlatFinder.Api\\FlatFinder.Api\\Services\\SearchParserService.cs",
+              "RelativeDocumentMoniker": "FlatFinder.Api\\Services\\SearchParserService.cs",
+              "ToolTip": "C:\\projects\\FlatFinder\\backend\\FlatFinder.Api\\FlatFinder.Api\\Services\\SearchParserService.cs",
+              "RelativeToolTip": "FlatFinder.Api\\Services\\SearchParserService.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAqwCwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T18:11:40.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SearchLink.cs",
+              "DocumentMoniker": "C:\\projects\\FlatFinder\\backend\\FlatFinder.Api\\FlatFinder.Api\\Models\\SearchLink.cs",
+              "RelativeDocumentMoniker": "FlatFinder.Api\\Models\\SearchLink.cs",
+              "ToolTip": "C:\\projects\\FlatFinder\\backend\\FlatFinder.Api\\FlatFinder.Api\\Models\\SearchLink.cs",
+              "RelativeToolTip": "FlatFinder.Api\\Models\\SearchLink.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T18:11:04.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SearchResult.cs",
+              "DocumentMoniker": "C:\\projects\\FlatFinder\\backend\\FlatFinder.Api\\FlatFinder.Api\\Models\\SearchResult.cs",
+              "RelativeDocumentMoniker": "FlatFinder.Api\\Models\\SearchResult.cs",
+              "ToolTip": "C:\\projects\\FlatFinder\\backend\\FlatFinder.Api\\FlatFinder.Api\\Models\\SearchResult.cs",
+              "RelativeToolTip": "FlatFinder.Api\\Models\\SearchResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T18:10:41.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SearchRequest.cs",
+              "DocumentMoniker": "C:\\projects\\FlatFinder\\backend\\FlatFinder.Api\\FlatFinder.Api\\Models\\SearchRequest.cs",
+              "RelativeDocumentMoniker": "FlatFinder.Api\\Models\\SearchRequest.cs",
+              "ToolTip": "C:\\projects\\FlatFinder\\backend\\FlatFinder.Api\\FlatFinder.Api\\Models\\SearchRequest.cs",
+              "RelativeToolTip": "FlatFinder.Api\\Models\\SearchRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T18:10:10.678Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
