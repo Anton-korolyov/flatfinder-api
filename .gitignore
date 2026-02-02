@@ -1,6 +1,12 @@
+# .NET
 bin/
 obj/
-.env
-.env.*
+.vs/
+
+# User files
 *.user
 *.suo
+
+# Env
+.env
+.env.*
