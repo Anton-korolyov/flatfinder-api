@@ -8,7 +8,7 @@ namespace FlatFinder.Api.Services
         {
             var links = new List<SearchLink>();
 
-            var city = data.City?.Trim().ToLower();
+            var city = CityNormalizer.Normalize(data.City);
 
             // =====================
             // 🟧 YAD2
