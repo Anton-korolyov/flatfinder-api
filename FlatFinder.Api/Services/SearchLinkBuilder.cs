@@ -74,7 +74,6 @@ namespace FlatFinder.Api.Services
 
             // =====================
             // 🟩 MADLAN (✔ правильно)
-
            
             if (!string.IsNullOrEmpty(city) &&
             CityMap.Madlan.TryGetValue(city, out var madlanSlug))
