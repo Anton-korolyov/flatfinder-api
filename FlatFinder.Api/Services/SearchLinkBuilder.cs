@@ -1,4 +1,5 @@
 ﻿using FlatFinder.Api.Models;
+using static System.Net.WebRequestMethods;
 
 namespace FlatFinder.Api.Services
 {
@@ -277,7 +278,8 @@ namespace FlatFinder.Api.Services
                 links.Add(new SearchLink
                 {
                     Site = "Facebook",
-                    Url = $"https://www.facebook.com/search/groups/?q=rent%20{Uri.EscapeDataString(city)}",
+                    //Url = $"https://www.facebook.com/search/groups/?q=rent%20{Uri.EscapeDataString(city)}",
+                    Url = $"https://www.facebook.com/search?q=חיפה%20שכירות",
                     Description = "Группы без маклеров"
                 });
             }
