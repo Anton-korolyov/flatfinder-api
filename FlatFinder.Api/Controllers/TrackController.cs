@@ -104,6 +104,7 @@ namespace FlatFinder.Api.Controllers
                         count = g.Count()
                     })
             });
+
         }
         [HttpGet("logs")]
         public IActionResult GetLogs(int take = 50)
