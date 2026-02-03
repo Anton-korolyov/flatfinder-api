@@ -22,6 +22,7 @@ namespace FlatFinder.Api.Controllers
         {
             try
             {
+
                 var ua = Request.Headers["User-Agent"].ToString();
                 var ip = HttpContext.Connection.RemoteIpAddress?.ToString();
 
@@ -60,9 +61,14 @@ namespace FlatFinder.Api.Controllers
 
                 return Ok();
             }
-            catch
+            catch (Exception ex)
             {
-                return Ok(); // никогда не ломаем фронт
+                System.IO.File.AppendAllText(
+      Path.Combine(Path.GetTempPath(), "track_error.log"),
+      ex.ToString() + "\n\n"
+  );
+                return Ok();
+              
             }
         }
 
