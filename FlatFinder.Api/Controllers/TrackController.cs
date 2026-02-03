@@ -22,13 +22,40 @@ namespace FlatFinder.Api.Controllers
         {
             try
             {
-
                 var ua = Request.Headers["User-Agent"].ToString();
-                var ip = HttpContext.Connection.RemoteIpAddress?.ToString();
 
-                // ❌ не считаем localhost
+                var ip =
+                    Request.Headers["CF-Connecting-IP"].FirstOrDefault()
+                    ?? HttpContext.Connection.RemoteIpAddress?.ToString();
+
                 if (ip == "127.0.0.1" || ip == "::1")
                     return Ok();
+
+                // 🔹 Client Hints
+                var chModel = Request.Headers["Sec-CH-UA-Model"].FirstOrDefault();
+                var chPlatform = Request.Headers["Sec-CH-UA-Platform"].FirstOrDefault();
+
+                // 🔹 Platform
+                var platform =
+                    chPlatform ??
+                    (ua.Contains("Android") ? "Android" :
+                     ua.Contains("iPhone") ? "iOS" :
+                     ua.Contains("Windows") ? "Windows" :
+                     ua.Contains("Macintosh") ? "macOS" :
+                     "Unknown");
+
+                // 🔹 Device model
+                var deviceModel =
+                    !string.IsNullOrWhiteSpace(chModel)
+                        ? chModel
+                        : DetectDeviceModel(ua);
+
+                // 🔹 Brand
+                var brand =
+                    deviceModel.StartsWith("SM-") ? "Samsung" :
+                    deviceModel.Contains("iPhone") ? "Apple" :
+                    deviceModel.Contains("Redmi") || deviceModel.Contains("Mi") ? "Xiaomi" :
+                    "Unknown";
 
                 var visit = new VisitLog
                 {
@@ -36,17 +63,18 @@ namespace FlatFinder.Api.Controllers
                     Ip = ip,
                     UserAgent = ua,
                     Device = ua.Contains("Mobile") ? "Mobile" : "Desktop",
-                    DeviceModel = DetectDeviceModel(ua), // 👈 ВОТ СЮДА
+                    DeviceModel = deviceModel,
+                    DeviceBrand = brand,
+                    Platform = platform,
                     Browser =
-                    ua.Contains("Chrome") ? "Chrome" :
-                    ua.Contains("Firefox") ? "Firefox" :
-                    ua.Contains("Safari") ? "Safari" : "Other",
+                        ua.Contains("Chrome") ? "Chrome" :
+                        ua.Contains("Firefox") ? "Firefox" :
+                        ua.Contains("Safari") ? "Safari" : "Other",
                     Path = req.Path,
                     Referrer = req.Referrer,
                     Screen = req.Screen,
                     Language = req.Language
                 };
-
 
                 var json = JsonSerializer.Serialize(visit);
 
@@ -64,13 +92,13 @@ namespace FlatFinder.Api.Controllers
             catch (Exception ex)
             {
                 System.IO.File.AppendAllText(
-      Path.Combine(Path.GetTempPath(), "track_error.log"),
-      ex.ToString() + "\n\n"
-  );
+                    Path.Combine(Path.GetTempPath(), "track_error.log"),
+                    ex.ToString() + "\n\n"
+                );
                 return Ok();
-              
             }
         }
+
 
         // 📊 простая статистика
         [HttpGet("stats")]

@@ -11,6 +11,8 @@
         public string? Path { get; set; }
         public string? Referrer { get; set; }
         public string? Screen { get; set; }
+        public string? Platform { get; set; }
+        public string? DeviceBrand { get; set; }
         public string? Language { get; set; }
     }
 }

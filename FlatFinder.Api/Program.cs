@@ -23,7 +23,16 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors("react");
+app.Use(async (context, next) =>
+{
+    context.Response.Headers["Accept-CH"] =
+        "Sec-CH-UA-Model, Sec-CH-UA-Platform, Sec-CH-UA-Mobile";
 
+    context.Response.Headers["Permissions-Policy"] =
+        "ch-ua-model=*, ch-ua-platform=*, ch-ua-mobile=*";
+
+    await next();
+});
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
