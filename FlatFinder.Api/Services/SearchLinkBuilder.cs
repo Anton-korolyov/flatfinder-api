@@ -300,10 +300,26 @@ namespace FlatFinder.Api.Services
             var city = CityNormalizer.Normalize(data.City);
 
             // 🟧 YAD2 CARS
+            var query = new List<string>();
+
+            // 🌍 регион
+            if (data.Region != null)
+            {
+                query.Add($"area={(int)data.Region}");
+            }
+
+            // 💰 цена
+            if (data.PriceTo != null)
+            {
+                query.Add($"price=0-{data.PriceTo}");
+            }
+
             var yad2Url = "https://www.yad2.co.il/vehicles";
 
-            if (data.PriceTo != null)
-                yad2Url += $"?price=0-{data.PriceTo}";
+            if (query.Any())
+            {
+                yad2Url += "?" + string.Join("&", query);
+            }
 
             links.Add(new SearchLink
             {
@@ -320,7 +336,7 @@ namespace FlatFinder.Api.Services
                 Description = "Частные авто объявления"
             });
 
-            // 📘 FACEBOOK
+            // 📘 FACEBOOK (там город есть)
             if (!string.IsNullOrEmpty(city))
             {
                 links.Add(new SearchLink
@@ -333,6 +349,7 @@ namespace FlatFinder.Api.Services
 
             return links;
         }
+
 
     }
 }

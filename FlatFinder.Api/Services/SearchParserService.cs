@@ -22,7 +22,17 @@ namespace FlatFinder.Api.Services
                     break;
                 }
             }
-
+            // =====================
+            // 🌍 РЕГИОН
+            // =====================
+            foreach (var pair in RegionMap.Map)
+            {
+                if (text.Contains(pair.Key))
+                {
+                    result.Region = pair.Value;
+                    break;
+                }
+            }
             // 🛏 КОМНАТЫ
             var roomsMatch = Regex.Match(text, @"(\d)\s*(комн|комнаты|комната|חדרים?|rooms?)");
             if (roomsMatch.Success)

@@ -6,6 +6,7 @@
         public string? City { get; set; }
         public int? Rooms { get; set; }
         public int? PriceTo { get; set; }
+        public RegionType? Region { get; set; }
         public bool WithoutAgent { get; set; }
         // 🔽 для машин (позже)
         public string? CarBrand { get; set; }
