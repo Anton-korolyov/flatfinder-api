@@ -332,7 +332,7 @@ namespace FlatFinder.Api.Services
             links.Add(new SearchLink
             {
                 Site = "Homeless Cars",
-                Url = "https://www.homeless.co.il/car",
+                Url = "https://www.homeless.co.il/private",
                 Description = "Частные авто объявления"
             });
 
