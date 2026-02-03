@@ -2,9 +2,9 @@
 {
     public class TrackRequest
     {
-        public string Path { get; set; }
-        public string Referrer { get; set; }
-        public string Screen { get; set; }
-        public string Language { get; set; }
+        public string? Path { get; set; }
+        public string? Referrer { get; set; }   // ✅ nullable
+        public string? Screen { get; set; }
+        public string? Language { get; set; }
     }
 }
