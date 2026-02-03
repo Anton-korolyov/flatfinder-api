@@ -7,6 +7,14 @@ namespace FlatFinder.Api.Services
     {
         public List<SearchLink> Build(SearchResult data)
         {
+            return data.Type switch
+            {
+                SearchType.Cars => BuildCars(data),
+                _ => BuildRent(data)
+            };
+        }
+        public List<SearchLink> BuildRent(SearchResult data)
+        {
             var links = new List<SearchLink>();
 
             var city = CityNormalizer.Normalize(data.City);
@@ -286,5 +294,45 @@ namespace FlatFinder.Api.Services
 
             return links;
         }
+        private List<SearchLink> BuildCars(SearchResult data)
+        {
+            var links = new List<SearchLink>();
+            var city = CityNormalizer.Normalize(data.City);
+
+            // 🟧 YAD2 CARS
+            var yad2Url = "https://www.yad2.co.il/vehicles";
+
+            if (data.PriceTo != null)
+                yad2Url += $"?price=0-{data.PriceTo}";
+
+            links.Add(new SearchLink
+            {
+                Site = "Yad2 Cars",
+                Url = yad2Url,
+                Description = "Автомобили с рук"
+            });
+
+            // 🟦 HOMELESS CARS
+            links.Add(new SearchLink
+            {
+                Site = "Homeless Cars",
+                Url = "https://www.homeless.co.il/car",
+                Description = "Частные авто объявления"
+            });
+
+            // 📘 FACEBOOK
+            if (!string.IsNullOrEmpty(city))
+            {
+                links.Add(new SearchLink
+                {
+                    Site = "Facebook Marketplace",
+                    Url = $"https://www.facebook.com/marketplace/{city}/vehicles",
+                    Description = "Marketplace"
+                });
+            }
+
+            return links;
+        }
+
     }
 }

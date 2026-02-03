@@ -5,55 +5,63 @@ namespace FlatFinder.Api.Services
 {
     public class SearchParserService
     {
-     
-            public SearchResult Parse(string text)
+
+        public SearchResult Parse(string text)
+        {
+            text = text.ToLower();
+            var result = new SearchResult();
+
+            DetectSearchType(text, result);
+
+            // 📍 ГОРОД
+            foreach (var pair in CityAliases.Map)
             {
-                var originalText = text;
-                text = text.ToLower();
-
-                var result = new SearchResult();
-
-                // =====================
-                // 📍 ГОРОД (любой язык)
-                // =====================
-                foreach (var alias in CityAliases.Map.Keys)
+                if (text.Contains(pair.Key))
                 {
-                    if (text.Contains(alias))
-                    {
-                        result.City = alias; // НЕ канон!
-                        break;
-                    }
+                    result.City = pair.Value;
+                    break;
                 }
+            }
 
-                // =====================
-                // 🛏 КОМНАТЫ
-                // =====================
-                var roomsMatch = Regex.Match(text, @"(\d)\s*(комн|комнаты|комната|חדרים?|rooms?)");
-                if (roomsMatch.Success)
-                    result.Rooms = int.Parse(roomsMatch.Groups[1].Value);
+            // 🛏 КОМНАТЫ
+            var roomsMatch = Regex.Match(text, @"(\d)\s*(комн|комнаты|комната|חדרים?|rooms?)");
+            if (roomsMatch.Success)
+                result.Rooms = int.Parse(roomsMatch.Groups[1].Value);
 
-                // =====================
-                // 💰 ЦЕНА
-                // =====================
-                var priceMatch = Regex.Match(text, @"(до|עד|up to)\s*(\d{3,5})");
-                if (priceMatch.Success)
-                    result.PriceTo = int.Parse(priceMatch.Groups[2].Value);
+            // 💰 ЦЕНА
+            var priceMatch = Regex.Match(text, @"(до|עד|up to)\s*([\d,]{3,7})");
+            if (priceMatch.Success)
+            {
+                var raw = priceMatch.Groups[2].Value.Replace(",", "");
+                result.PriceTo = int.Parse(raw);
+            }
 
-                // =====================
-                // 🚫 БЕЗ МАКЛЕРА
-                // =====================
-                if (
-                    text.Contains("без маклер") ||
-                    text.Contains("без агента") ||
-                    text.Contains("ללא תיווך") ||
-                    text.Contains("no agent")
-                )
-                {
-                    result.WithoutAgent = true;
-                }
+            // 🚫 БЕЗ МАКЛЕРА
+            if (
+                text.Contains("без маклер") ||
+                text.Contains("без агента") ||
+                text.Contains("ללא תיווך") ||
+                text.Contains("no agent")
+            )
+            {
+                result.WithoutAgent = true;
+            }
 
-                return result;
+            return result;
+        }
+        private static void DetectSearchType(string text, SearchResult result)
+        {
+            if (
+                text.Contains("маш") ||
+                text.Contains("авто") ||
+                text.Contains("car") ||
+                text.Contains("vehicle") ||
+                text.Contains("רכב")
+            )
+            {
+                result.Type = SearchType.Cars;
             }
         }
-    
+    }
+
 }
