@@ -145,6 +145,7 @@ namespace FlatFinder.Api.Controllers
                 return huawei.Value;
 
             return "Unknown";
+
         }
     }
 }
